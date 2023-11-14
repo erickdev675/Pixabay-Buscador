@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Imágenes Pixabay</title>
+    <meta name="description" content="Encuentra las mejores imágenes gratis para descargar. ✓ Gratis para fines comerciales ✓ Sin atribución requerida ✓ Imágenes en Alta Resolución.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icono.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <main class="pt-24 px-5 pb-10 text-white bg-cover bg-gradient-to-r from-purple-500 to-pink-500">
+        <header id="header" class="bg-white sm:bg-transparent transition-bg duration-300 flex items-center w-full m-0 h-16 px-8 fixed top-0 left-0">
+            <a href="https://pixabay.com/" target="_blank">
+                <img src="images/logo.png" alt="logo pixabay" class="logo-pixabay filter-invert" width='110' height="30">
+                <img src="images/logo.png" alt="logo pixabay-mobile" class="logo-pixabay-mobile" width='90' height="24">
+            </a>
+
+            <button 
+                id="btn-mobile-search"
+                class="mr-2 cursor-pointer flex items-center justify-center bg-green-500 hover:bg-green-400"
+                type="button"
+            >
+                <span class="material-symbols-outlined text-white">
+                    search
+                </span>
+            </button>
+
+            <form id="formulario-header" class="xl:w-1/3 md:w-1/2 sm:w-full hidden sm:ml-5">
+                <div id="contenedor-input-header"
+                    class="flex bg-gray-200 rounded-full items-center justify-center px-5 py-1">
+                    <button type="submit" class="mr-2 cursor-pointer flex items-center justify-center">
+                        <span id="icono-header" class="material-symbols-outlined text-gray-500">
+                            search
+                        </span>
+                    </button>
+
+                    <input 
+                        type="text" 
+                        class="text-black outline-none w-full p-1 bg-gray-200"
+                        placeholder="Ingrese una palabra. Eje: cafe, futbol, etc." 
+                        id="input-header" 
+                        required
+                    >
+                </div>
+
+                <button 
+                    id="btn-mobile-close"
+                    class="mr-2 cursor-pointer flex items-center justify-center bg-green-500 hover:bg-green-400"
+                    type="button"
+                >
+                    <span class="material-symbols-outlined text-white">
+                        close
+                    </span>
+                </button>
+            </form>
+        </header>
+
+        <h1 class="text-center text-2xl sm:text-3xl leading-tight font-bold mx-4">Increíbles Imágenes Gratis Para Descargar</h1>
+
+        <div class="buscador sm:max-w-lg lg:max-w-3xl mx-auto">
+            <form id="formulario">
+                <div class="p-5 text-center">
+                    <label class="block mb-8 leading-tight sm:text-lg">Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</label>
+
+                    <div class="flex bg-white rounded-full items-center justify-center px-5 py-2">
+                        <button type="submit" class="mr-2 cursor-pointer flex items-center justify-center">
+                            <span id="icono-main" class="material-symbols-outlined text-gray-500">
+                                search
+                            </span>
+                        </button>
+
+                        <input 
+                            type="text" 
+                            class="text-black outline-none w-full p-1"
+                            placeholder="Ingrese una palabra. Eje: cafe, futbol, etc." 
+                            id="input-main" 
+                            required
+                        >
+                    </div>
+
+                    <input 
+                        type="submit" 
+                        value="Buscar Imágenes"
+                        class="mt-5 py-2 px-4 bg-green-500 cursor-pointer font-bold uppercase hover:bg-green-400 rounded-full text-sm sm:text-lg"
+                    >
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <section id="main" class="py-8 pt-10 text-center px-6">
+        <h2 class="font-bold mb-8 text-2xl leading-tight sm:text-3xl">Imagenes gratuitas que puedes utilizar donde quieras</h2>
+        <h3 id="info-resultado" class="text-xl sm:text-2xl"></h3>
+        <h3 id="numero-pagina" class="mt-2 text-2xl sm:text-3xl"></h3>
+    </section>
+
+    <section id="resultado" class="container mx-auto mt-2  flex flex-wrap p-4 hidden"></section>
+
+    <div id="paginacion" class="container mx-auto mb-10 text-center flex flex-wrap mx-auto justify-center p-5 hidden"></div>
+
+    <footer class="md:flex text-center items-center justify-between text-gray-800 py-6 px-10 text-sm md:text-base">
+        <p class="mb-4 md:mb-0">Visita el sitio oficial de <a href="https://pixabay.com/" target="_blank" class="font-bold hover:text-green-500">Pixabay</a> para mas imagenes</p>
+        <p>Copyrigth © <span class="font-bold">RubDeveloper</span> <span class="year"></span>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
