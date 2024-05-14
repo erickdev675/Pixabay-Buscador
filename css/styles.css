@@ -3,13 +3,13 @@
 }
 
 body {
-    background: #8b1717;
+    background: #ffffff;
 }
 
 main {
     background-image: 
         linear-gradient(0deg,rgba(25,27,38,.32),rgba(25,27,38,.72)),
-        url('/images/fondo.jpg');
+        url('/images/fondo-2.jpg');
 }
 
 .logo-pixabay {
